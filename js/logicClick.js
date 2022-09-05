@@ -5,15 +5,17 @@ import { greenArrCon } from "./algorithm.js";
 import { brownArrCon } from "./algorithm.js";
 import { blueArrCon } from "./algorithm.js";
 
+const ancientChange = document.querySelector('.ancients-choice-flex');
+const ancientList = ancientChange.querySelectorAll('.ancient');
+const buttonChange = document.querySelector('.button-change');
+
+const ancientsClose = document.querySelector('.ancients-close');
 
 
 
-const changeAnc12 = document.querySelector('.ancient-Cthulthu');
-const changeAnc13 = document.querySelector('.ancient-ShubNiggurath');
-const changeAnc14 = document.querySelector('.ancient-IogSothoth');
-const changeAnc15 = document.querySelector('.ancient-Azathoth');
+
 const hText = document.querySelector('.h-text');
-const ancCont = document.querySelector('.ancients-container').style;
+const ancCont = document.querySelector('.ancients-container');
 
 const diffCont = document.querySelector('.diff-container');
 const cardCont = document.querySelector('.card-container');
@@ -43,32 +45,27 @@ const cardH3 = document.querySelector('.card-h-3').style;
 
 let nowCard = null;
 
+let backActive = '';
 
+let selectedDiv;
 
-
-const buttonChange = document.querySelector('.button-change');
-
-if (buttonChange.classList.contains('button-change-active') === true) {
-    buttonChange.classList.remove('button-change-active');
-}
 
 
 export function changeButton(nameCard) {
-    buttonChange.classList.add('button-change-active');
-    changeAnc12.classList.remove('active');
-    changeAnc13.classList.remove('active');
-    changeAnc14.classList.remove('active');
-    changeAnc15.classList.remove('active');
+
+    ancientList.forEach((value) => {
+        value.classList.remove('active');
+        value.style.display = 'none';
+    })
+    ancientsClose.style.display = 'block';
+    nameCard.style.display = 'block';
     nameCard.classList.add('active');
+    buttonChange.classList.add('button-change-active');
+    hText.style.display = 'none';
 
     function popupDiff() {
         ancientLogic(nameCard);
-        changeAnc12.style.display = 'none';
-        changeAnc13.style.display = 'none';
-        changeAnc14.style.display = 'none';
-        changeAnc15.style.display = 'none';
         hText.textContent = "Выберите уровень сложности";
-        nameCard.style.display = 'block';
         nameCard.classList.remove('active');
         nameCard.classList.add('active-post');
         diffCont.style.display = 'flex';
@@ -79,20 +76,34 @@ export function changeButton(nameCard) {
     buttonChange.addEventListener('click', popupDiff);
 }
 
-changeAnc12.addEventListener('click', () => {
-    changeButton(changeAnc12);
-});
-changeAnc13.addEventListener('click', () => {
-    changeButton(changeAnc13);
-});
-changeAnc14.addEventListener('click', () => {
-    changeButton(changeAnc14);
-});
-changeAnc15.addEventListener('click', () => {
-    changeButton(changeAnc15);
-});
+
+ancientList.forEach((value) => {
+    value.addEventListener('click', () => {
+        changeButton(value);
+    });
+})
+
+ancientsClose.addEventListener('click', () => {
+    ancientList.forEach((value) => {
+        value.classList.remove('active');
+        value.style.display = 'block';
+        ancientsClose.style.display = 'none';
+        buttonChange.classList.remove('button-change-active');
+        hText.style.display = 'block';
+    })});
 
 
+/* ancientsCont1.onclick = function (event) {
+    let target = event.target;
+    if (target.tagName != 'DIV') return;
+    changeButton(target);
+}
+
+ancientsCont2.onclick = function (event) {
+    let target = event.target;
+    if (target.tagName != 'DIV') return;
+    changeButton(target);
+} */
 
 function changeDiff(difficult) {
 
@@ -150,7 +161,7 @@ function notCard() {
     setTimeout(function () {
         location.reload();
     }, 1500);
-    
+
 }
 
 function newCard() {
@@ -191,7 +202,7 @@ function newCard() {
         cardH2.opacity = "0.6";
         cardH2.color = "gray";
         green3.textContent -= 1;
-    } else if ((Number(brown3.textContent) > 0)  && (brownArrCon.includes(fullStackArr[0]) === true)) {
+    } else if ((Number(brown3.textContent) > 0) && (brownArrCon.includes(fullStackArr[0]) === true)) {
         cardH2.opacity = "0.6";
         cardH2.color = "gray";
         brown3.textContent -= 1;

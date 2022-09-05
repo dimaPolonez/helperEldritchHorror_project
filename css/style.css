@@ -13,7 +13,6 @@ body {
 
 .wrapper {
     max-width: 1980px; 
-    min-height: 120vh;
     min-height: 100vh;
     margin: 0 auto;
     display: flex;
@@ -39,16 +38,99 @@ body {
     justify-content: space-evenly;
     align-content: center;
     align-items: center;
+    transition: 0.4s;
     
 }
+.ancients-choice-flex {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    transition: 0.4s; 
+}
 
-.ancient-Azathoth {
-    width: 300px;
-    height: 360px;
+
+.ancients-choice1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    transition: 0.4s; 
+}
+
+.ancients-choice2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    transition: 0.4s; 
+}
+
+.ancient-Abhoth {
+    width: 150px;
+    height: 180px;
     background-size: 100% 100%;
     opacity: 0.6;
     cursor: pointer;
-    background-image: url(../assets/Ancients/Azathoth.png);
+    background-image: url(../assets/Ancients/Abhoth.jpg);
+    border-radius: 10px;
+}
+
+.ancient-Abhoth:hover {
+    border: 1px solid #fff;
+    box-shadow:0 0 20px #555;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.ancient-Antediluvium {
+    width: 150px;
+    height: 180px;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    cursor: pointer;
+    background-image: url(../assets/Ancients/Antediluvium.jpg);
+    border-radius: 10px;
+}
+
+.ancient-Antediluvium:hover {
+    border: 1px solid #fff;
+    box-shadow:0 0 20px #555;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.ancient-AtlachNacha {
+    width: 150px;
+    height: 180px;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    cursor: pointer;
+    background-image: url(../assets/Ancients/AtlachNacha.jpg);
+    border-radius: 10px;
+}
+
+.ancient-AtlachNacha:hover {
+    border: 1px solid #fff;
+    box-shadow:0 0 20px #555;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.ancient-Azathoth {
+    width: 150px;
+    height: 180px;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    cursor: pointer;
+    background-image: url(../assets/Ancients/Azathoth.jpg);
     border-radius: 10px;
 }
 
@@ -61,12 +143,12 @@ body {
 
 
 .ancient-Cthulthu {
-    width: 300px;
-    height: 360px;
+    width: 150px;
+    height: 180px;
     background-size: 100% 100%;
     opacity: 0.6;
     cursor: pointer;
-    background-image: url(../assets/Ancients/Cthulthu.png);
+    background-image: url(../assets/Ancients/Cthulthu.jpg);
     border-radius: 10px;
 }
 
@@ -77,13 +159,47 @@ body {
     transition: 0.4s;
 }
 
-.ancient-IogSothoth {
-    width: 300px;
-    height: 360px;
+.ancient-Hastur {
+    width: 150px;
+    height: 180px;
     background-size: 100% 100%;
     opacity: 0.6;
     cursor: pointer;
-    background-image: url(../assets/Ancients/IogSothoth.png);
+    background-image: url(../assets/Ancients/Hastur.jpg);
+    border-radius: 10px;
+}
+
+.ancient-Hastur:hover {
+    border: 1px solid #fff;
+    box-shadow:0 0 20px #555;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.ancient-Hypnos {
+    width: 150px;
+    height: 180px;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    cursor: pointer;
+    background-image: url(../assets/Ancients/Hypnos.jpg);
+    border-radius: 10px;
+}
+
+.ancient-Hypnos:hover {
+    border: 1px solid #fff;
+    box-shadow:0 0 20px #555;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.ancient-IogSothoth {
+    width: 150px;
+    height: 180px;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    cursor: pointer;
+    background-image: url(../assets/Ancients/IogSothoth.jpg);
     border-radius: 10px;
 }
 
@@ -94,13 +210,81 @@ body {
     transition: 0.4s;
 }
 
-.ancient-ShubNiggurath {
-    width: 300px;
-    height: 360px;
+.ancient-Ithaqua {
+    width: 150px;
+    height: 180px;
     background-size: 100% 100%;
     opacity: 0.6;
     cursor: pointer;
-    background-image: url(../assets/Ancients/ShubNiggurath.png);
+    background-image: url(../assets/Ancients/Ithaqua.jpg);
+    border-radius: 10px;
+}
+
+.ancient-Ithaqua:hover {
+    border: 1px solid #fff;
+    box-shadow:0 0 20px #555;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.ancient-NephrenKa {
+    width: 150px;
+    height: 180px;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    cursor: pointer;
+    background-image: url(../assets/Ancients/NephrenKa.jpg);
+    border-radius: 10px;
+}
+
+.ancient-NephrenKa:hover {
+    border: 1px solid #fff;
+    box-shadow:0 0 20px #555;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.ancient-Nyarlathotep {
+    width: 150px;
+    height: 180px;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    cursor: pointer;
+    background-image: url(../assets/Ancients/Nyarlathotep.jpg);
+    border-radius: 10px;
+}
+
+.ancient-Nyarlathotep:hover {
+    border: 1px solid #fff;
+    box-shadow:0 0 20px #555;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.ancient-RiseOfTheElderThings {
+    width: 150px;
+    height: 180px;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    cursor: pointer;
+    background-image: url(../assets/Ancients/RiseOfTheElderThings.jpg);
+    border-radius: 10px;
+}
+
+.ancient-RiseOfTheElderThings:hover {
+    border: 1px solid #fff;
+    box-shadow:0 0 20px #555;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.ancient-ShubNiggurath {
+    width: 150px;
+    height: 180px;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    cursor: pointer;
+    background-image: url(../assets/Ancients/ShubNiggurath.jpg);
     border-radius: 10px;
 }
 
@@ -111,9 +295,60 @@ body {
     transition: 0.4s;
 }
 
+.ancient-ShuddeMell {
+    width: 150px;
+    height: 180px;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    cursor: pointer;
+    background-image: url(../assets/Ancients/ShuddeMell.jpg);
+    border-radius: 10px;
+}
+
+.ancient-ShuddeMell:hover {
+    border: 1px solid #fff;
+    box-shadow:0 0 20px #555;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.ancient-Syzygy {
+    width: 150px;
+    height: 180px;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    cursor: pointer;
+    background-image: url(../assets/Ancients/Syzygy.jpg);
+    border-radius: 10px;
+}
+
+.ancient-Syzygy:hover {
+    border: 1px solid #fff;
+    box-shadow:0 0 20px #555;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.ancient-Yig {
+    width: 150px;
+    height: 180px;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    cursor: pointer;
+    background-image: url(../assets/Ancients/Yig.jpg);
+    border-radius: 10px;
+}
+
+.ancient-Yig:hover {
+    border: 1px solid #fff;
+    box-shadow:0 0 20px #555;
+    opacity: 1;
+    transition: 0.4s;
+}
+
 .active {
-    width: 443px;
-    height: 574px;
+    width: 475px;
+    height: 630px;
     border: 1px solid #fff;
     box-shadow:0 0 20px #555;
     opacity: 1;
@@ -121,10 +356,40 @@ body {
 }
 
 .active-post {
-    width: 443px;
-    height: 574px;
+    width: 475px;
+    height: 630px;
     opacity: 1;
 }
+
+.ancients-close {
+    display: none;
+    position: relative;
+    top: 15px;
+    width: 100px;
+    height: 100px;
+    opacity: 0.5;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.ancients-close:before,
+  .ancients-close:after {
+    position: absolute;
+    bottom: 1px;
+    content: ' ';
+    height: 100px;
+    width: 2px;
+    background-color: #333;
+  }
+  
+  .ancients-close:before {
+    transform: rotate(45deg);
+  }
+  
+  .ancients-close:after {
+    transform: rotate(-45deg);
+  }
 
 
 .button-change {
@@ -297,6 +562,56 @@ body {
 }
 
 
+@media all and (min-width: 320px) and (max-width: 800px){
+
+body {
+    font-size: 34px;
+}
+
+.h-text {
+    height: 80px;
+    margin-top: 10px;
+}
+
+.ancients-container {
+    height: 500px;
+}
+
+.ancient-Abhoth, .ancient-Antediluvium, .ancient-AtlachNacha, .ancient-Azathoth,
+.ancient-Cthulthu, .ancient-Hastur, .ancient-Hypnos, .ancient-IogSothoth, .ancient-Ithaqua,
+.ancient-NephrenKa, .ancient-Nyarlathotep,  .ancient-RiseOfTheElderThings, .ancient-ShubNiggurath,
+.ancient-ShuddeMell, .ancient-Syzygy, .ancient-Yig {
+    width: 75px;
+    height: 90px;
+}
+
+.active {
+    width: 295px;
+    height: 450px;
+}
+
+.ancients-choice-flex {
+    width: 100%;
+    height: 200px;
+    
+}
+
+.ancients-choice1 {
+    width: 330px;
+    flex-wrap: wrap;
+}
+
+.ancients-choice2 {
+    width: 330px;
+    flex-wrap: wrap;
+}
+
+.button-change {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+}
 
 
 
