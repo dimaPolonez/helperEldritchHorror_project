@@ -4,18 +4,18 @@ const ancientsData = [
     nameRu: 'Абхот',
     firstStage: {
       greenCards: 1,
-      blueCards: 2,
-      brownCards: 1,
+      brownCards: 2,
+      blueCards: 1,
     },
     secondStage: {
       greenCards: 3,
-      blueCards: 2,
-      brownCards: 1,
+      brownCards: 2,
+      blueCards: 1,
     },
     thirdStage: {
       greenCards: 2,
-      blueCards: 4,
-      brownCards: 0,
+      brownCards: 4,
+      blueCards: 0,
     },
   },
   {
@@ -23,18 +23,18 @@ const ancientsData = [
     nameRu: 'Antediluvium',
     firstStage: {
       greenCards: 1,
-      blueCards: 2,
-      brownCards: 1,
+      brownCards: 2,
+      blueCards: 1,
     },
     secondStage: {
       greenCards: 2,
-      blueCards: 3,
-      brownCards: 1,
+      brownCards: 3,
+      blueCards: 1,
     },
     thirdStage: {
       greenCards: 2,
-      blueCards: 4,
-      brownCards: 0,
+      brownCards: 4,
+      blueCards: 0,
     },
   },
   {
@@ -42,18 +42,18 @@ const ancientsData = [
     nameRu: 'Алтач-Нача',
     firstStage: {
       greenCards: 1,
-      blueCards: 2,
-      brownCards: 1,
+      brownCards: 2,
+      blueCards: 1,
     },
     secondStage: {
       greenCards: 3,
-      blueCards: 2,
-      brownCards: 1,
+      brownCards: 2,
+      blueCards: 1,
     },
     thirdStage: {
       greenCards: 2,
-      blueCards: 4,
-      brownCards: 0,
+      brownCards: 4,
+      blueCards: 0,
     },
   },
   {
@@ -61,18 +61,18 @@ const ancientsData = [
     nameRu: 'Азатот',
     firstStage: {
       greenCards: 1,
-      blueCards: 2,
-      brownCards: 1,
+      brownCards: 2,
+      blueCards: 1,
     },
     secondStage: {
       greenCards: 2,
-      blueCards: 3,
-      brownCards: 1,
+      brownCards: 3,
+      blueCards: 1,
     },
     thirdStage: {
       greenCards: 2,
-      blueCards: 4,
-      brownCards: 0,
+      brownCards: 4,
+      blueCards: 0,
     },
   },
   {
@@ -80,18 +80,18 @@ const ancientsData = [
     nameRu: 'Ктулху',
     firstStage: {
       greenCards: 0,
-      blueCards: 2,
       brownCards: 2,
+      blueCards: 2,
     },
     secondStage: {
       greenCards: 1,
-      blueCards: 3,
-      brownCards: 0,
+      brownCards: 3,
+      blueCards: 0,
     },
     thirdStage: {
       greenCards: 3,
-      blueCards: 4,
-      brownCards: 0,
+      brownCards: 4,
+      blueCards: 0,
     },
   },
   {
@@ -99,18 +99,18 @@ const ancientsData = [
     nameRu: 'Хастур',
     firstStage: {
       greenCards: 0,
-      blueCards: 2,
       brownCards: 2,
+      blueCards: 2,
     },
     secondStage: {
       greenCards: 2,
-      blueCards: 3,
-      brownCards: 0,
+      brownCards: 3,
+      blueCards: 0,
     },
     thirdStage: {
       greenCards: 3,
-      blueCards: 5,
-      brownCards: 0,
+      brownCards: 5,
+      blueCards: 0,
     },
   },
   {
@@ -118,18 +118,18 @@ const ancientsData = [
     nameRu: 'Гипнос',
     firstStage: {
       greenCards: 0,
-      blueCards: 2,
-      brownCards: 1,
+      brownCards: 2,
+      blueCards: 1,
     },
     secondStage: {
       greenCards: 2,
-      blueCards: 3,
-      brownCards: 1,
+      brownCards: 3,
+      blueCards: 1,
     },
     thirdStage: {
       greenCards: 3,
-      blueCards: 4,
-      brownCards: 0,
+      brownCards: 4,
+      blueCards: 0,
     },
   },
   {
@@ -137,18 +137,18 @@ const ancientsData = [
     nameRu: 'Йог-Сотот',
     firstStage: {
       greenCards: 0,
-      blueCards: 2,
-      brownCards: 1,
+      brownCards: 2,
+      blueCards: 1,
     },
     secondStage: {
       greenCards: 2,
-      blueCards: 3,
-      brownCards: 1,
+      brownCards: 3,
+      blueCards: 1,
     },
     thirdStage: {
       greenCards: 3,
-      blueCards: 4,
-      brownCards: 0,
+      brownCards: 4,
+      blueCards: 0,
     },
   },
   {
@@ -156,18 +156,18 @@ const ancientsData = [
     nameRu: 'Итаква',
     firstStage: {
       greenCards: 0,
-      blueCards: 2,
       brownCards: 2,
+      blueCards: 2,
     },
     secondStage: {
       greenCards: 4,
-      blueCards: 2,
-      brownCards: 0,
+      brownCards: 2,
+      blueCards: 0,
     },
     thirdStage: {
       greenCards: 2,
-      blueCards: 4,
-      brownCards: 0,
+      brownCards: 4,
+      blueCards: 0,
     },
   },
   {
@@ -175,18 +175,18 @@ const ancientsData = [
     nameRu: 'Нефрен-Ка',
     firstStage: {
       greenCards: 0,
-      blueCards: 2,
       brownCards: 2,
+      blueCards: 2,
     },
     secondStage: {
       greenCards: 1,
-      blueCards: 3,
-      brownCards: 0,
+      brownCards: 3,
+      blueCards: 0,
     },
     thirdStage: {
       greenCards: 3,
-      blueCards: 4,
-      brownCards: 0,
+      brownCards: 4,
+      blueCards: 0,
     },
   },
   {
@@ -194,18 +194,18 @@ const ancientsData = [
     nameRu: 'Ньярлатотеп',
     firstStage: {
       greenCards: 1,
-      blueCards: 2,
-      brownCards: 1,
+      brownCards: 2,
+      blueCards: 1,
     },
     secondStage: {
       greenCards: 2,
-      blueCards: 3,
-      brownCards: 1,
+      brownCards: 3,
+      blueCards: 1,
     },
     thirdStage: {
       greenCards: 2,
-      blueCards: 4,
-      brownCards: 0,
+      brownCards: 4,
+      blueCards: 0,
     },
   },
   {
@@ -213,18 +213,18 @@ const ancientsData = [
     nameRu: 'Возвышение Старцев',
     firstStage: {
       greenCards: 2,
-      blueCards: 2,
-      brownCards: 1,
+      brownCards: 2,
+      blueCards: 1,
     },
     secondStage: {
       greenCards: 3,
-      blueCards: 3,
-      brownCards: 1,
+      brownCards: 3,
+      blueCards: 1,
     },
     thirdStage: {
       greenCards: 4,
-      blueCards: 4,
-      brownCards: 0,
+      brownCards: 4,
+      blueCards: 0,
     },
   },
   {
@@ -232,18 +232,18 @@ const ancientsData = [
     nameRu: 'Шуб-Ниггурат',
     firstStage: {
       greenCards: 1,
-      blueCards: 2,
-      brownCards: 1,
+      brownCards: 2,
+      blueCards: 1,
     },
     secondStage: {
       greenCards: 3,
-      blueCards: 2,
-      brownCards: 1,
+      brownCards: 2,
+      blueCards: 1,
     },
     thirdStage: {
       greenCards: 2,
-      blueCards: 4,
-      brownCards: 0,
+      brownCards: 4,
+      blueCards: 0,
     },
   },
   {
@@ -251,18 +251,18 @@ const ancientsData = [
     nameRu: 'Шудде-Мьелл',
     firstStage: {
       greenCards: 0,
-      blueCards: 2,
       brownCards: 2,
+      blueCards: 2,
     },
     secondStage: {
       greenCards: 4,
-      blueCards: 2,
-      brownCards: 0,
+      brownCards: 2,
+      blueCards: 0,
     },
     thirdStage: {
       greenCards: 2,
-      blueCards: 4,
-      brownCards: 0,
+      brownCards: 4,
+      blueCards: 0,
     },
   },
   {
@@ -270,18 +270,18 @@ const ancientsData = [
     nameRu: 'Сигизия',
     firstStage: {
       greenCards: 0,
-      blueCards: 2,
       brownCards: 2,
+      blueCards: 2,
     },
     secondStage: {
       greenCards: 3,
-      blueCards: 3,
-      brownCards: 0,
+      brownCards: 3,
+      blueCards: 0,
     },
     thirdStage: {
       greenCards: 3,
-      blueCards: 5,
-      brownCards: 0,
+      brownCards: 5,
+      blueCards: 0,
     },
   },
   {
@@ -289,18 +289,18 @@ const ancientsData = [
     nameRu: 'Йиг',
     firstStage: {
       greenCards: 1,
-      blueCards: 2,
-      brownCards: 1,
+      brownCards: 2,
+      blueCards: 1,
     },
     secondStage: {
       greenCards: 2,
-      blueCards: 3,
-      brownCards: 1,
+      brownCards: 3,
+      blueCards: 1,
     },
     thirdStage: {
       greenCards: 2,
-      blueCards: 4,
-      brownCards: 0,
+      brownCards: 4,
+      blueCards: 0,
     },
   }
 ]
