@@ -2,7 +2,6 @@ import blueCardsData from './mythicCards/blue/index.js';
 import brownCardsData from './mythicCards/brown/index.js';
 import greenCardsData from './mythicCards/green/index.js';
 import ancientsData from './mythicCards/ancients.js'
-import { changeButton } from "./logicClick.js";
 
 const green1 = document.querySelector('.green-1');
 const green2 = document.querySelector('.green-2');
@@ -30,12 +29,14 @@ export let fullStackArr = [];
 
 let activeDiff = null;
 
+export let activeAncientRu = null;
+
 
 export function ancientLogic(ancient) {
-    let activeAncient = String(ancient.className).split('ancient-').join('').split(' active').join('').toLowerCase();
-
+    let activeAncient = String(ancient.className).split('ancient-').join('').split(' ancient active-post').join('');
     ancientsData.forEach((value) => {
-        if ((value.name).toLowerCase() === activeAncient) {
+        if (value.name === activeAncient) {
+            activeAncientRu = value.nameRu;
             green1.textContent = value.firstStage.greenCards;
             blue1.textContent = value.firstStage.blueCards;
             brown1.textContent = value.firstStage.brownCards;
@@ -70,8 +71,6 @@ function randomStack() {
                 i -= 1;
             } else {
                 if (greenCardsData[num].difficulty === 'easy') {
-                    greenArr.push(greenCardsData[num].cardFace);
-                } else if ((greenCardsData[num].difficulty === 'normal') && ((greenArr.length > 4) && (greenArr.length <= fullGreen))) {
                     greenArr.push(greenCardsData[num].cardFace);
                 } else {
                     i -= 1;
@@ -121,8 +120,6 @@ function randomStack() {
             } else {
                 if (greenCardsData[num].difficulty === 'hard') {
                     greenArr.push(greenCardsData[num].cardFace);
-                } else if ((greenCardsData[num].difficulty === 'normal') && ((greenArr.length > 4) && (greenArr.length <= fullGreen))) {
-                    greenArr.push(greenCardsData[num].cardFace);
                 } else {
                     i -= 1;
                 }
@@ -139,8 +136,6 @@ function randomStack() {
                 i -= 1;
             } else {
                 if (brownCardsData[num].difficulty === 'easy') {
-                    brownArr.push(brownCardsData[num].cardFace);
-                } else if ((brownCardsData[num].difficulty === 'normal') && ((brownArr.length > 4) && (brownArr.length <= fullBrown))) {
                     brownArr.push(brownCardsData[num].cardFace);
                 } else {
                     i -= 1;
@@ -190,8 +185,6 @@ function randomStack() {
             } else {
                 if (brownCardsData[num].difficulty === 'hard') {
                     brownArr.push(brownCardsData[num].cardFace);
-                } else if ((brownCardsData[num].difficulty === 'normal') && ((brownArr.length > 4) && (brownArr.length <= fullBrown))) {
-                    brownArr.push(brownCardsData[num].cardFace);
                 } else {
                     i -= 1;
                 }
@@ -208,8 +201,6 @@ function randomStack() {
                 i -= 1;
             } else {
                 if (blueCardsData[num].difficulty === 'easy') {
-                    blueArr.push(blueCardsData[num].cardFace);
-                } else if ((blueCardsData[num].difficulty === 'normal') && ((blueArr.length > 3) && (blueArr.length <= fullBlue))) {
                     blueArr.push(blueCardsData[num].cardFace);
                 } else {
                     i -= 1;
@@ -258,8 +249,6 @@ function randomStack() {
                 i -= 1;
             } else {
                 if (blueCardsData[num].difficulty === 'hard') {
-                    blueArr.push(blueCardsData[num].cardFace);
-                } else if ((blueCardsData[num].difficulty === 'normal') && ((blueArr.length > 3) && (blueArr.length <= fullBlue))) {
                     blueArr.push(blueCardsData[num].cardFace);
                 } else {
                     i -= 1;
