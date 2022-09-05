@@ -4,6 +4,9 @@ import { fullStackArr } from "./algorithm.js";
 import { greenArrCon } from "./algorithm.js";
 import { brownArrCon } from "./algorithm.js";
 import { blueArrCon } from "./algorithm.js";
+import { activeAncientRu } from "./algorithm.js";
+
+
 
 const ancientChange = document.querySelector('.ancients-choice-flex');
 const ancientList = ancientChange.querySelectorAll('.ancient');
@@ -11,6 +14,9 @@ const buttonChange = document.querySelector('.button-change');
 
 const ancientsClose = document.querySelector('.ancients-close');
 
+const wrapper = document.querySelector('.wrapper');
+
+const cardCount = document.querySelector('.card-count');
 
 
 
@@ -45,11 +51,6 @@ const cardH3 = document.querySelector('.card-h-3').style;
 
 let nowCard = null;
 
-let backActive = '';
-
-let selectedDiv;
-
-
 
 export function changeButton(nameCard) {
 
@@ -64,13 +65,17 @@ export function changeButton(nameCard) {
     hText.style.display = 'none';
 
     function popupDiff() {
-        ancientLogic(nameCard);
-        hText.textContent = "Выберите уровень сложности";
+        ancientChange.style.width = '475px';
+        ancientsClose.style.display = 'none';
+        hText.style.display = 'block';
+        ancientChange.style.pointerEvents = 'none';
+        hText.textContent = "Выберите уровень сложности карт";
         nameCard.classList.remove('active');
         nameCard.classList.add('active-post');
         diffCont.style.display = 'flex';
-        buttonChange.style.visibility = 'hidden';
+        buttonChange.style.visibility = 'hidden'; 
         ancCont.justifyContent = '';
+        ancientLogic(nameCard);
     }
 
     buttonChange.addEventListener('click', popupDiff);
@@ -93,20 +98,7 @@ ancientsClose.addEventListener('click', () => {
     })});
 
 
-/* ancientsCont1.onclick = function (event) {
-    let target = event.target;
-    if (target.tagName != 'DIV') return;
-    changeButton(target);
-}
-
-ancientsCont2.onclick = function (event) {
-    let target = event.target;
-    if (target.tagName != 'DIV') return;
-    changeButton(target);
-} */
-
 function changeDiff(difficult) {
-
     diff0.classList.remove('diff-active');
     diff1.classList.remove('diff-active');
     diff2.classList.remove('diff-active');
@@ -122,10 +114,10 @@ function changeDiff(difficult) {
         diffLogic(difficult);
         diffCont.style.display = 'none';
         buttonChange.style.visibility = 'hidden';
-        buttonChange.style.height = '80px';
+        buttonChange.style.height = '100px';
         cardCont.style.display = 'flex';
         cardFull.style.display = 'block';
-        hText.textContent = "Чтобы вытащить карту, нажмите на колоду!";
+        hText.textContent = "Чтобы вытащить карту Мифов, нажмите на колоду!";
     }
     buttonChange.addEventListener('click', popupCard);
 }
@@ -152,16 +144,23 @@ if (cardFull.classList.contains('card-reverse') === true) {
 }
 
 
-function notCard() {
+function reload() {
     buttonChange.style.visibility = 'hidden';
-    hText.textContent = "Игра завершена!";
-    hText.style.marginTop = '350px';
-    ancCont.display = 'none';
+    hText.style.display = 'none';
+    ancCont.style.display = 'none';
     cardCont.style.display = 'none';
     setTimeout(function () {
         location.reload();
-    }, 1500);
+    }, 10);
 
+}
+
+function winAncient() {
+    hText.style.height = '140px';
+    hText.textContent = `Древний ${activeAncientRu} захватил этот мир! Игра окончена!`;
+    cardFull.style.display = 'none';
+    cardCont.style.display = 'none';
+    wrapper.style.backgroundImage = 'url(./assets/gameOver.jpg)';
 }
 
 function newCard() {
@@ -170,11 +169,11 @@ function newCard() {
     buttonChange.style.height = '80px';
     buttonChange.textContent = 'Играть ещё раз';
     buttonChange.addEventListener('click', () => {
-        notCard();
+        reload();
     });
 
     if (fullStackArr.length === 0) {
-        notCard();
+        winAncient();
     }
 
     cardFull.style.backgroundImage = fullStackArr[0];
@@ -188,35 +187,44 @@ function newCard() {
         blue1.textContent -= 1;
     } else if ((Number(green2.textContent) > 0) && (greenArrCon.includes(fullStackArr[0]) === true)) {
         cardH1.opacity = "0.6";
-        cardH1.color = "gray";
+        cardH1.color = "red";
         green2.textContent -= 1;
     } else if ((Number(brown2.textContent) > 0) && (brownArrCon.includes(fullStackArr[0]) === true)) {
         cardH1.opacity = "0.6";
-        cardH1.color = "gray";
+        cardH1.color = "red";
         brown2.textContent -= 1;
     } else if ((Number(blue2.textContent) > 0) && (blueArrCon.includes(fullStackArr[0]) === true)) {
         cardH1.opacity = "0.6";
-        cardH1.color = "gray";
+        cardH1.color = "red";
         blue2.textContent -= 1;
     } else if ((Number(green3.textContent) > 0) && (greenArrCon.includes(fullStackArr[0]) === true)) {
         cardH2.opacity = "0.6";
-        cardH2.color = "gray";
+        cardH2.color = "red";
         green3.textContent -= 1;
     } else if ((Number(brown3.textContent) > 0) && (brownArrCon.includes(fullStackArr[0]) === true)) {
         cardH2.opacity = "0.6";
-        cardH2.color = "gray";
+        cardH2.color = "red";
         brown3.textContent -= 1;
     } else if ((Number(blue3.textContent) > 0) && (blueArrCon.includes(fullStackArr[0]) === true)) {
         cardH2.opacity = "0.6";
-        cardH2.color = "gray";
+        cardH2.color = "red";
         blue3.textContent -= 1;
     }
 
+    let sumCard = Number(brown1.textContent) + Number(blue1.textContent) + Number(green1.textContent) 
+    + Number(brown2.textContent) + Number(blue2.textContent) + Number(green2.textContent) 
+    + Number(brown3.textContent) + Number(blue3.textContent) + Number(green3.textContent); 
+
     fullStackArr.shift();
+    cardCount.textContent = `Осталось карт в колоде: ${sumCard}`;
+    if (sumCard === 0) {
+        cardCount.style.opacity = "0.6";
+        cardCount.style.color = 'red';
+    }
 
     if ((Number(brown3.textContent) === 0) && (Number(blue3.textContent) === 0)) {
         cardH3.opacity = "0.6";
-        cardH3.color = "gray";
+        cardH3.color = "red";
     }
 }
 
