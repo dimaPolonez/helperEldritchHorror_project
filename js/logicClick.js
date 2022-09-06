@@ -65,7 +65,7 @@ export function changeButton(nameCard) {
     hText.style.display = 'none';
 
     function popupDiff() {
-        ancientChange.style.width = '475px';
+        ancientChange.style.width = '455px';
         ancientsClose.style.display = 'none';
         hText.style.display = 'block';
         ancientChange.style.pointerEvents = 'none';
@@ -106,15 +106,12 @@ function changeDiff(difficult) {
     diff4.classList.remove('diff-active');
     difficult.classList.add('diff-active');
     buttonChange.style.visibility = 'visible';
-    buttonChange.style.height = '110px';
-    buttonChange.style.fontSize = '40px';
     buttonChange.textContent = 'Замешать колоду';
 
     function popupCard() {
         diffLogic(difficult);
         diffCont.style.display = 'none';
         buttonChange.style.visibility = 'hidden';
-        buttonChange.style.height = '100px';
         cardCont.style.display = 'flex';
         cardFull.style.display = 'block';
         hText.textContent = "Чтобы вытащить карту Мифов, нажмите на колоду!";
@@ -166,7 +163,6 @@ function winAncient() {
 function newCard() {
 
     buttonChange.style.visibility = 'visible';
-    buttonChange.style.height = '80px';
     buttonChange.textContent = 'Играть ещё раз';
     buttonChange.addEventListener('click', () => {
         reload();
